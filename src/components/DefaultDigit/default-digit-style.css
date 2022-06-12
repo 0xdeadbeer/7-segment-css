@@ -1,0 +1,48 @@
+
+
+.digit {
+}
+
+.segment {
+  border-radius: 5rem !important;
+}
+
+.vertical_segment {
+  height: 80px; 
+  width: 20px;
+}
+
+.horizontal_segment {
+  width: 70px;
+  height: 20px;
+  margin: 0px 5px;
+}
+
+.f_segment { grid-area: fsegment }
+.a_segment { grid-area: asegment }
+.b_segment { grid-area: bsegment }
+.c_segment { grid-area: csegment }
+.d_segment { grid-area: dsegment }
+.e_segment { grid-area: esegment }
+.g_segment { grid-area: gsegment }
+
+.active_segment {
+    background: rgb(255, 60, 60); 
+}
+
+.inactive_segment {
+    background: rgb(65, 65, 65); 
+}
+
+.grid_container {
+  display: grid;
+  grid-template-areas:
+      '.        asegment .'
+      'fsegment .        bsegment'
+      '.        gsegment .'
+      'esegment .        csegment'
+      '.        dsegment .';
+  width: fit-content;
+  padding: 10px;
+  margin: auto;
+}

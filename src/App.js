@@ -1,25 +1,33 @@
 import {React, useState, useEffect} from 'react';
 import './App.css';
 
+import DefaultDigit from './components/DefaultDigit/DefaultDigit';
+
 function App() {
-  const [text, setText] = useState('');
-  
-  useEffect(() => {
-    setText("b");
-  })
 
   return (
     <div className="grid place-items-center h-screen w-full">
-      <div className="container">
-        <div className="grid-container">
-          <div className="active-segment segment f-segment vertical-segment"></div>
-          <div className="active-segment segment a-segment horizontal-segment"></div>
-          <div className="active-segment segment b-segment vertical-segment"></div>
-          <div className="inactive-segment segment g-segment horizontal-segment"></div>
-          <div className="active-segment segment e-segment vertical-segment"></div>
-          <div className="active-segment segment c-segment vertical-segment"></div>
-          <div className="active-segment segment d-segment horizontal-segment"></div>
-        </div>
+      <div className="w-8/12 
+                  bg-[#222222] 
+                  p-10 
+                  rounded-xl 
+                  shadow-xl 
+                  shadow-[#00000040] 
+                  opacity-90 
+                  cursor-pointer 
+                  transition 
+                  hover:-translate-y-2 
+                  hover:opacity-100">
+        <DefaultDigit digit="0" />
+        <DefaultDigit digit="1" />
+        <DefaultDigit digit="2" />
+        <DefaultDigit digit="3" />
+        <DefaultDigit digit="4" />
+        <DefaultDigit digit="5" />
+        <DefaultDigit digit="6" />
+        <DefaultDigit digit="7" />
+        <DefaultDigit digit="8" />
+        <DefaultDigit digit="9" />
       </div>
     </div>
   );
