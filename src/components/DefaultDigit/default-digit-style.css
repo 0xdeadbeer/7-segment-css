@@ -8,14 +8,13 @@
 }
 
 .vertical_segment {
-  height: 80px; 
-  width: 20px;
+  height: 50px; 
+  width: 12px;
 }
 
 .horizontal_segment {
-  width: 70px;
-  height: 20px;
-  margin: 0px 5px;
+  width: 40px;
+  height: 12px;
 }
 
 .f_segment { grid-area: fsegment }
@@ -27,11 +26,11 @@
 .g_segment { grid-area: gsegment }
 
 .active_segment {
-    background: rgb(255, 60, 60); 
+    background: rgb(255, 48, 48); 
 }
 
 .inactive_segment {
-    background: rgb(65, 65, 65); 
+    background: rgba(61, 61, 61, 0.596); 
 }
 
 .grid_container {
@@ -43,6 +42,5 @@
       'esegment .        csegment'
       '.        dsegment .';
   width: fit-content;
-  padding: 10px;
   margin: auto;
 }

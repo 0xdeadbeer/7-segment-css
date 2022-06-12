@@ -2,7 +2,7 @@ import {React, useState, useEffect } from "react";
 import "./default-digit-style.css";
 
 
-function DefaultDigit({digit}) {
+const DefaultDigit = ({digit, onClick, title}) => {
 
     const [digitValue, setDigitValue] = useState();
     const segmentsFlow = [
@@ -43,27 +43,17 @@ function DefaultDigit({digit}) {
             console.error(`Input '${_digit}' must be a number between 0-9 `); 
             return; 
         }
-
-        setDigitValue(_digit); 
     }, [])
-
-    useEffect(() => {
         
-    }, [digitValue])
-    
-    
-        return ( 
-            <div className="inline-block">
-                <div className="grid_container">
-                    {segmentsFlow.map((segment, index) => {
-                        return (
-                            <div className={`${digitToSegmentsDiary[digit][index] ? "active_segment" : "inactive_segment"} segment ${segment[0]}_segment ${segment[1]}`}></div>
-                        )
-                    })}
-                </div>
+    return ( 
+        <div onClick={onClick} title={title} className="inline-block">
+            <div className="grid_container">
+                {segmentsFlow.map((segment, index) => {
+                    return <div key={index} className={`${digitToSegmentsDiary[digit][index] ? "active_segment" : "inactive_segment"} segment ${segment[0]}_segment ${segment[1]}`}></div>
+                })}
             </div>
-        )
-    
+        </div>
+    )
 }
 
 export default DefaultDigit; 
